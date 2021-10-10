@@ -1,0 +1,50 @@
+import random
+print ("Bem vindo ao jogo dos 21 fósforos, cujo o objetivo é não ficar com o último fósforo.")
+jogador= input ("Prima a tecla 1 se pretender ser o primeiro a jogar, ou a tecla 2, caso contrário.")
+if jogador == "1":
+    c=1
+    while c<=4:
+        print ("Insira um número de 1 a 4")
+        resposta=int (input())
+        print ("Escolho o número",5-resposta)
+        somatorio= 21-5*c
+        print ("Há", somatorio," fósforos restantes.")
+        c+=1
+    print ("Perdeu o jogo! Tente novamente!!")
+
+if jogador =="2":
+    fosf=21
+    x=0
+    while fosf>7:
+        print("")
+        if x==0:
+            jogadacpu=random.randint(1,4)
+            print("Escolho o número:",jogadacpu)
+            print("Há",fosf-jogadacpu,"fósforos disponíveis.")
+            jogada=int(input("Escolhe um número de 1 a 4: "))
+            fosf=fosf-(jogadacpu+jogada)
+            print("Há",fosf,"fósforos disponíveis.")
+        else:
+            jogadacpu=x
+            print("Escolho o número:",jogadacpu)
+            print("Há",fosf-jogadacpu,"fósforos disponíveis.")
+            jogada=int(input("Escolhe um número de 1 a 4: "))
+            fosf=fosf-(jogadacpu+jogada)
+            print("Há",fosf,"fósforos disponíveis.")
+        if (jogadacpu+jogada==5):
+            x=0
+        else:
+            if (jogadacpu+jogada<5):
+                x=5-(jogadacpu+jogada)
+            else:
+                x=10-(jogadacpu+jogada)
+    print("")
+    x=fosf-1
+    jogadacpu=x
+    print("Escolho o número:",x)
+    fosf=fosf-x
+    print("")
+    print("Há",fosf,"fósforos disponíveis.")
+    print("")
+    print("Não foi desta! Tente novamente!")
+            
