@@ -1,4 +1,4 @@
-## Olá  👋
+### Olá  👋
 ##### O meu nome é Sara Vieira,A95945.
 #### Este repositório foi criado com o intuito de submeter os trabalhos propostos durante as aulas de Algoritmos e Técnicas de Programação.
 Inicialmente criei tudo em branches, uma vez que não sabia trabalhar com este website.😵
